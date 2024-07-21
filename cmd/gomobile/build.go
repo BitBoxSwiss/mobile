@@ -250,6 +250,7 @@ var (
 	buildIOSVersion string      // -iosversion
 	buildAndroidAPI int         // -androidapi
 	buildTags       stringsFlag // -tags
+	buildGoListFlags    string      // -glflags
 )
 
 func addBuildFlags(cmd *command) {
@@ -257,6 +258,7 @@ func addBuildFlags(cmd *command) {
 	cmd.flag.StringVar(&buildGcflags, "gcflags", "", "")
 	cmd.flag.StringVar(&buildLdflags, "ldflags", "", "")
 	cmd.flag.StringVar(&buildOverlay, "overlay", "", "")
+	cmd.flag.StringVar(&buildGoListFlags, "glflags", "", "")
 	cmd.flag.StringVar(&buildTarget, "target", "android", "")
 	cmd.flag.StringVar(&buildBundleID, "bundleid", "", "")
 	cmd.flag.StringVar(&buildIOSVersion, "iosversion", "13.0", "")
